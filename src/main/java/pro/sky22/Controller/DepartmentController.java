@@ -32,7 +32,7 @@ public class DepartmentController {
     }
 
     @GetMapping(path = "/all")
-    public Map<Integer, List<Employee>> findAllEmployees() {
+    public List<Employee> findAllEmployees() {
         return departmentService.findAllEmployees();
     }
 

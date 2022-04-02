@@ -5,9 +5,9 @@ import pro.sky22.Employee;
 import pro.sky22.Exception.EmployeeExistsException;
 import pro.sky22.Exception.EmployeeNotFoundExceptiion;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.apache.commons.lang3.StringUtils.capitalize;
@@ -55,7 +55,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return null;
     }
 
-     @Override
+    @Override
     public Employee remove(String firstName, String lastName, int department, int salary) {
         String key = getKey(firstName, lastName);
         if (employeeList.remove(key) == null) {
@@ -77,8 +77,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Collection<Employee> getAll() {
-        return Collections.unmodifiableCollection(employeeList.values());
+    public List<Employee> getAll() {
+        return new ArrayList<>(employeeList.values());
     }
 
     private String getKey(String firstName, String lastName) {

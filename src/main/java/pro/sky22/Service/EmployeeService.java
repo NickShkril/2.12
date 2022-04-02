@@ -3,6 +3,7 @@ package pro.sky22.Service;
 import pro.sky22.Employee;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface EmployeeService {
 
@@ -15,5 +16,5 @@ public interface EmployeeService {
 
     Employee find(String firstName, String lastName);
 
-    Collection<Employee> getAll();
+    List<Employee> getAll();
 }

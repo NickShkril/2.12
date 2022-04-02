@@ -12,7 +12,7 @@ public interface DepartmentService {
 
     Employee employeeWithMinSalary(int departmentId);
 
-    Map<Integer, List<Employee>> findAllEmployees();
+    List<Employee> findAllEmployees();
 
     Collection<Employee> findEmployeesByDepartment(Integer departmentId);
 }
